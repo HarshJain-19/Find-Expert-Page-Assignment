@@ -88,12 +88,12 @@ const renderExpertPage = data => {
             </div>
           </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex flex-wrap row-gap-2">
           <button class="btn-normal">Add to Shortlist</button>
           <button class="btn-orange-side">Get Contact Details</button>
         </div>
       </div>
-      <div class="d-flex flex-wrap my-3 pt-3 pb-1 border-bottom border-3">
+      <div class="d-flex flex-wrap flex-grow-1 my-3 pt-3 pb-1 border-bottom border-3">
         <div style="min-width: 48%;" class="column-gap-2">
           <h6 class="text-secondary" style="font-size: 14px; line-height: 0.5em;">Industry</h6>
           <p class="fw-semibold" style="font-size: 13.5px;">${data.industry}</p>

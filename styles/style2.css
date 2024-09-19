@@ -1,0 +1,258 @@
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+.search-container .search-image {
+  opacity: 0.4;
+  margin-left: 5px;
+}
+
+.search-container img {
+  vertical-align: middle;
+}
+
+.search-container input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 6px;
+}
+
+.search-container :is(button, input, select, textarea) {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+}
+
+.search-container input {
+  width: 300px;
+}
+
+.search-container .vl {
+  border-left: 1px solid #E2E2E2;
+  width: 1px;
+  height: 48px;
+  opacity: 0.3px;
+  margin-right: 20px;
+}
+
+.search-container .country-select {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.search-container .find-jobs-btn {
+  background-color: #00355F;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 20px 16px;
+  position: relative;
+  width: 150px;
+  height: 64px;
+  text-align: center;
+  margin-left: 32px;
+}
+
+.search-container .find-jobs-btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 26%;
+  height: 28px;
+  background-color: red;
+  transform: translateX(50%);
+  width: 6px;
+}
+
+.mobile-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-container {
+    display: contents;
+  }
+}
+
+.mobile-container .search-section {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  padding: 12px 16px;
+  box-shadow: 0px 8px 16px 0px #7F6AFF4D;
+  border: 1px solid #E2E2E2;
+}
+
+.mobile-container .country-select {
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(127, 106, 255, 0.3);
+  border-style: solid;
+  border-width: 1px;
+  background-color: var(--White, #fff);
+  display: flex;
+  margin-top: 8px;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 12px 26px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.mobile-container div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.mobile-container .find-jobs-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--Employer-Blue, #00355F);
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin-left: 0px;
+  height: 64px;
+  text-align: center;
+}
+
+.mobile-container .find-jobs-btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 26%;
+  height: 28px;
+  background-color: red;
+  transform: translateX(50%);
+  width: 6px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.grow {
+  transition: scale 0.05s;
+}
+
+.grow:hover {
+  scale: 1.01;
+}
+
+.btn-orange-side {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: relative;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  margin-left: 32px;
+}
+
+.btn-orange-side::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  background-color: red;
+  transform: translateX(50%);
+  width: 6px;
+}
+
+.btn-normal {
+  background-color: #fff;
+  color: #003366;
+  border: 2px solid currentColor;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: relative;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  margin-left: 32px;
+}
+
+.dropdown .show i {
+  rotate: 180deg;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 1rem;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background-color: #003366e4;
+  border-radius: 1rem;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #003366;
+  cursor: grab;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+.active {
+  color: black;
+  border-bottom: 4px solid #003366;
+  padding-bottom: 10px;
+  font-family: navbar;
+  font-weight: 600;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #9c9c9c;
+  color: #f3f1f1 !important;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  color: #52a2f2 !important;
+  background-color: #cecece;
+}

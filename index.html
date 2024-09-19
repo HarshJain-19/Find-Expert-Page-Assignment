@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Find Experts</title>
 
-  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/style1.css" />
+  <link rel="stylesheet" href="./styles/style2.css" />
   <link rel="stylesheet" href="./styles/responsive.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -18,42 +19,36 @@
 <body>
   <!-- Header -->
   <header class="py-4">
-    <div class="container header-container">
+    <div class="container header-container d-flex justify-content-start">
       <img src="./assets/logo.png" alt="Logo" class="logo-img">
-
-      <div class="navbarelement" style="margin-left: -100px;">
-        <h4 class="h4"> Profile Settings</h4>
-        <nav>
-          <ul class="mt-3 column-gap-4 text-capitalize" id="head-nav">
-            <li><a href="#" class="fw-semibold">Find Job Seaker</a></li>
-            <li class="active"><a href="#" class="fw-semibold">For an employee</a></li>
-          </ul>
-        </nav>
-      </div>
-      <ul class="d-flex flex-row column-gap-4" style="margin-left:410px; list-style-type: none;">
-        <li class="d-flex flex-row align-items-center" style="color: rgba(0, 0, 0, 0.6);">
-          <div style="word-spacing: -1px;">
+      <div class="d-flex justify-content-between mx-5 flex-grow-1">
+        <ul class="mt-3 column-gap-4 text-capitalize list-unstyled d-flex" id="head-nav">
+          <li><a href="#">Find Job Seaker</a></li>
+          <li class="active"><a href="#">For an employee</a></li>
+        </ul>
+        <ul class="d-flex flex-row align-items-center column-gap-4 list-unstyled">
+          <li class="d-flex flex-row align-items-center" style="color: rgba(0, 0, 0, 0.6); word-spacing: -1px;">
             <i class="fas fa-phone"></i>
             <span>+91 7670 800 000</span>
-          </div>
-        </li>
-        <li><div class="vertical-line"></div></li>
-        <li class="d-flex align-items-center column-gap-2" style="cursor: pointer;">
-          <i class="fa-regular fa-circle-user fs-5"></i>
-          <a href="#" class="text-decoration-none" style="color: black;">Sign In</a>
-        </li>
-      </ul>
+          </li>
+          <li class="vertical-line h-50"></li>
+          <li class="d-flex align-items-center column-gap-2" style="cursor: pointer;">
+            <i class="fa-regular fa-circle-user fs-5"></i>
+            <a href="#" class="text-decoration-none" style="color: black;">Sign In</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
 <!-- Main -->
   <!-- Tabs Navigation -->
-  <main class="mx-5 px-5 d-flex flex-column">
+  <main class="mx-2 px-2 mx-md-3 px-md-3 mx-xl-5 px-xxl-5 d-flex flex-column">
     <div class="mt-3 column-gap-4 text-capitalize d-flex column-gap-2" id="tab-nav">
-      <a href="#find-experts" class="fw-semibold text-black text-decoration-none active">Find Experts</a>
-      <a href="#post-jobs" class="fw-semibold text-black text-decoration-none">Post Jobs</a>
-      <a href="#why-y-axis" class="fw-semibold text-black text-decoration-none">Why Y-axis</a>
-      <a href="#complete-staffing-solution" class="fw-semibold text-black text-decoration-none">Complete staffing solutions</a>
+      <a href="#find-experts" class="text-black text-decoration-none active">Find Experts</a>
+      <a href="#post-jobs" class="text-black text-decoration-none">Post Jobs</a>
+      <a href="#why-y-axis" class="text-black text-decoration-none">Why Y-axis</a>
+      <a href="#complete-staffing-solution" class="text-black text-decoration-none">Complete staffing solutions</a>
     </div>
 
     <!-- search container -->
@@ -84,7 +79,7 @@
           </select>
         </div>
 
-        <a class="find-jobs-btn text-decoration-none" href="#">Find Experts</a>
+        <a class="find-jobs-btn text-light" href="#">Find Experts</a>
       </div>
 
       <div class="mobile-container">
@@ -128,9 +123,9 @@
     </div>
 
     <!-- filters -->
-    <div class="navbar navbar-expand-lg sticky-top" style="background-color: rgb(240, 240, 243);" style="height: 10dvh;" >
+    <div class="navbar navbar-expand-lg sticky-top mb-3" style="background-color: rgb(240, 240, 243);" style="height: 10dvh;" >
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav fs-6 fw-normal text-black d-flex justify-content-evenly w-100" id="filters">
+        <ul class="navbar-nav fs-6 fw-normal text-black d-flex flex-wrap justify-content-evenly w-100" id="filters">
           <!-- filters render from script.js, components.js, dataset.js -->
         </ul>
       </div>
@@ -141,7 +136,7 @@
       <aside class="d-flex flex-column row-gap-3 overflow-x-hidden overflow-y-auto scroll-bar" style="width: 29%; height: 82dvh;" id="experts-list">
         <!-- experts list data renders from style.js, component.js, dataset.js -->
       </aside>
-      <section class="overflow-x-hidden overflow-y-auto scroll-bar" id="expert-detail-page" style="width: 68%; height: 82dvh;">
+      <section class="overflow-x-hidden overflow-y-auto scroll-bar d-none d-md-block" id="expert-detail-page" style="width: 68%; height: 82dvh;">
         <!-- expert detail page render from script.js, component.js, dataset.js -->
       </section>
     </div>
@@ -152,8 +147,8 @@
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-new">
+      <div class="footer-top d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
+        <div class="footer-new d-flex flex-wrap flex-grow-1 justify-content-between">
           <div class="footer-section">
             <h3 class="fw-bold">ABOUT US</h3>
             <ul class="fw-medium">
@@ -216,10 +211,10 @@
           </div>
         </div>
 
-        <div class="footer-extra">
-          <div class="footer-middle">
+        <div class="mt-5 d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
+          <div class="footer-middle flex-grow-1">
             <h3 class="fw-bold">CONTACT US</h3><br>
-            <div class="country-contacts">
+            <div class="d-flex flex-wrap justify-content-between flex-grow-1">
               <div class="country-contact">
                 <img src="./assets/india.webp" style="transform: translate(0px, -5px);" alt="India Flag">
                 <div class="contact-info">
@@ -283,19 +278,15 @@
       </div>
     </div>
 
-    <div class="footerend">
-      <div class="footer-bottom">
-
-        <ul class="footer-links">
-          <li><a href="#">Refund Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Anti Fraud Policy</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Sitemap</a></li>
-        </ul>
-        <p class="copyright">&copy; 2023 Y-Axis. All rights reserved.</p>
-      </div>
-    </div>
+    <div class="footer-bottom">
+      <ul class="footer-links">
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Anti Fraud Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+      <p class="copyright">&copy; 2023 Y-Axis. All rights reserved.</p>
     </div>
   </footer>
 
