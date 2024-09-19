@@ -24,12 +24,6 @@ function makeActive(elementArray, element) {
         e.classList.remove("active");
   })
 }
-function rotateDropdown(e) {
-  if (e.children[0].style.rotate==="180deg") 
-    e.children[0].style.rotate = "0deg";
-  else 
-    e.children[0].style.rotate = "180deg";
-}
 
 
 

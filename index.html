@@ -62,12 +62,12 @@
         <label class="ms-3 me-4">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" placeholder="Search job title, Keywords" class="search-title">
-          <i class="fa-solid fa-xmark" style="color: #ff0000; background-color: rgba(128, 128, 128, 0.2); border-radius: 50%; padding: 4px; cursor: pointer;"></i>
+          <i class="fa-solid fa-xmark" style="color: #ff0000; background-color: rgba(128, 128, 128, 0.15); border-radius: 50%; padding: 4px; cursor: pointer;"></i>
         </label>
         <div class="vl"></div>
         <div class="country-select h-search-drop">
           <img class="search-image mx-3" style="opacity: 0.8;" src="./assets/uk.webp" alt="Search jobs" width="24" height="24" />
-          <select id="countrySelector" onchange="showFlag()">
+          <select id="countrySelector" onchange="showFlag()" class="border-0 bg-transparent">
             <option value="Australia">Australia</option>
             <option value="Canada">Canada</option>
             <option value="Denmark">Denmark</option>
@@ -84,7 +84,7 @@
           </select>
         </div>
 
-        <a class="find-jobs-btn" href="#">Find Experts</a>
+        <a class="find-jobs-btn text-decoration-none" href="#">Find Experts</a>
       </div>
 
       <div class="mobile-container">
@@ -128,7 +128,7 @@
     </div>
 
     <!-- filters -->
-    <div class="navbar navbar-expand-lg" style="background-color: rgba(203, 203, 220, 0.2);">
+    <div class="navbar navbar-expand-lg sticky-top" style="background-color: rgb(240, 240, 243);" style="height: 10dvh;" >
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav fs-6 fw-normal text-black d-flex justify-content-evenly w-100" id="filters">
           <!-- filters render from script.js, components.js, dataset.js -->
@@ -137,11 +137,11 @@
     </div>
 
     <!-- Content -->
-    <div class="d-flex justify-content-between mt-4 mb-5">
-      <aside class="d-flex flex-column row-gap-3" style="width: 29%;" id="experts-list">
+    <div class="d-flex justify-content-between mb-5 px-2" style="margin-top: 3dvh;">
+      <aside class="d-flex flex-column row-gap-3 overflow-x-hidden overflow-y-auto scroll-bar" style="width: 29%; height: 82dvh;" id="experts-list">
         <!-- experts list data renders from style.js, component.js, dataset.js -->
       </aside>
-      <section id="expert-detail-page" style="width: 68%; height: fit-content;">
+      <section class="overflow-x-hidden overflow-y-auto scroll-bar" id="expert-detail-page" style="width: 68%; height: 82dvh;">
         <!-- expert detail page render from script.js, component.js, dataset.js -->
       </section>
     </div>
@@ -150,7 +150,7 @@
 
 
   <!-- Footer -->
-  <footer class="border-top border-1">
+  <footer>
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-new">

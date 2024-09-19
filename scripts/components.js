@@ -2,7 +2,7 @@ const renderFilterDropdown = data => {
   const dataOptions = data.options.map(e => `<li><a class="dropdown-item" href="${e.link}">${e.option_name}</a></li>`).join(" ");
   return (
     `<li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="false" onclick="rotateDropdown(this)">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         ${data.filter_name}
         <i class="fa-solid fa-chevron-down"></i>
       </a>
