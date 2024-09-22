@@ -3,21 +3,41 @@ a {
   color: #000 !important;
 }
 
+.mobile-head-nav > * {
+  width: 50%;
+  padding: 0.4rem 0.5rem !important;
+  text-wrap: nowrap;
+  overflow-x: auto;
+}
+
+#tab-nav {
+  text-wrap: nowrap;
+  overflow-x: auto;
+}
+#tab-nav::-webkit-scrollbar {
+  height: 0;
+}
+
+.search-container {
+  border: 1px solid #E2E2E2;
+  padding: 5px 13px;
+  box-shadow: 0px 8px 16px #7F6AFF4D;
+}
 .search-container .search-image {
   opacity: 0.4;
   margin-left: 5px;
 }
-
 .search-container img {
   vertical-align: middle;
 }
-
 .search-container input[type="text"] {
   flex: 1;
   border: none;
   outline: none;
   font-size: 16px;
   padding: 6px;
+  min-width: 100px;
+  text-overflow: ellipsis;
 }
 
 .search-container :is(button, input, select, textarea) {
@@ -25,10 +45,6 @@ a {
   font-size: inherit;
   line-height: inherit;
   border: none;
-}
-
-.search-container input {
-  width: 300px;
 }
 
 .search-container .vl {
@@ -42,7 +58,6 @@ a {
 .search-container .country-select {
   display: flex;
   align-items: center;
-  margin: 0 8px;
 }
 
 .search-container .find-jobs-btn {
@@ -51,10 +66,9 @@ a {
   border: none;
   font-size: 15px;
   cursor: pointer;
-  padding: 20px 16px;
   position: relative;
   width: 150px;
-  height: 64px;
+  line-height: 50px;
   text-align: center;
   margin-left: 32px;
 }
@@ -70,90 +84,12 @@ a {
   width: 6px;
 }
 
-.mobile-container {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .mobile-container {
-    display: contents;
-  }
-}
-
-.mobile-container .search-section {
-  display: flex;
-  gap: 16px;
-  width: 100%;
-  padding: 12px 16px;
-  box-shadow: 0px 8px 16px 0px #7F6AFF4D;
-  border: 1px solid #E2E2E2;
-}
-
-.mobile-container .country-select {
-  width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(127, 106, 255, 0.3);
-  border-style: solid;
-  border-width: 1px;
-  background-color: var(--White, #fff);
-  display: flex;
-  margin-top: 8px;
-  max-width: 100%;
-  font-size: 16px;
-  font-weight: 400;
-  white-space: nowrap;
-  padding: 12px 26px;
-  margin-left: 0px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  margin: 0 8px;
-}
-
-.mobile-container div {
-  display: block;
-  unicode-bidi: isolate;
-}
-
-.mobile-container .find-jobs-btn {
-  width: 100%;
-  padding: 12px 20px;
-  background: var(--Employer-Blue, #00355F);
-  color: white;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-  position: relative;
-  margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  margin-left: 0px;
-  height: 64px;
-  text-align: center;
-}
-
-.mobile-container .find-jobs-btn::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 26%;
-  height: 28px;
-  background-color: red;
-  transform: translateX(50%);
-  width: 6px;
-}
-
 .dropdown-toggle::after {
   display: none !important;
 }
-
 .grow {
   transition: scale 0.05s;
 }
-
 .grow:hover {
   scale: 1.01;
 }
@@ -202,6 +138,14 @@ a {
 .dropdown .show i {
   rotate: 180deg;
 }
+.dropdown .accordion-header {
+  padding: 8px !important;
+}
+
+main > .navbar {
+  background-color: rgb(240, 240, 243);
+}
+
 
 .scroll-bar::-webkit-scrollbar {
   width: 7px;
@@ -227,11 +171,27 @@ a {
 }
 
 .active {
-  color: black;
+  color: #000;
+  background-color: #fff;
   border-bottom: 4px solid #003366;
   padding-bottom: 10px;
   font-family: navbar;
   font-weight: 600;
+}
+
+.content {
+  height: 100dvh;
+}
+.content > aside {
+  width: 29%; 
+}
+.content > section {
+  width: 68%;
+}
+.expert-cards {
+  box-shadow: 0 3px 10px #bdbdf7;
+  cursor: pointer; 
+  width: 97%;
 }
 
 .social-media {
@@ -255,4 +215,31 @@ a {
 .social-icons a:hover {
   color: #52a2f2 !important;
   background-color: #cecece;
+}
+.footer-new hr {
+  background-color: #000;
+  width: 100%;
+  height: 2px;
+  margin: -10px 0 20px !important;
+}
+.footer-section h3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-section i {
+  color: black;
+}
+.footer-section ul {
+  transition: all 0.3s 0s ease-in-out;
+  overflow-y: hidden;
+}
+.footer-section ul {
+  max-height: 500px;
+}
+.footer-section .show i {
+  rotate: 180deg;
+}
+.footer-section .show + ul {
+  max-height: 300px;
 }

@@ -18,33 +18,40 @@
 
 <body>
   <!-- Header -->
-  <header class="py-4">
-    <div class="container header-container d-flex justify-content-start">
+  <header class="pt-4 pb-2 px-md-2">
+    <div class="px-3 header-container d-flex justify-content-start align-items-center">
       <img src="./assets/logo.png" alt="Logo" class="logo-img">
-      <div class="d-flex justify-content-between mx-5 flex-grow-1">
-        <ul class="mt-3 column-gap-4 text-capitalize list-unstyled d-flex" id="head-nav">
+      <div class="d-flex justify-content-between ms-2 ms-md-4 ms-lg-5 flex-grow-1">
+        <ul class="d-none d-md-flex mt-3 column-gap-4 text-capitalize list-unstyled" id="head-nav">
           <li><a href="#">Find Job Seaker</a></li>
           <li class="active"><a href="#">For an employee</a></li>
         </ul>
-        <ul class="d-flex flex-row align-items-center column-gap-4 list-unstyled">
-          <li class="d-flex flex-row align-items-center" style="color: rgba(0, 0, 0, 0.6); word-spacing: -1px;">
+        <ul class="d-flex flex-wrap flex-row align-items-center column-gap-2 column-gap-md-3 column-gap-lg-4 list-unstyled ms-auto">
+          <li class="bg-warning px-2 py-1 fw-semibold rounded-2 d-block d-md-none flex-grow-1">Try Premium</li>
+          <li class="d-none d-sm-flex align-items-center column-gap-1" style="color: rgba(0, 0, 0, 0.6); word-spacing: -1px;">
             <i class="fas fa-phone"></i>
             <span>+91 7670 800 000</span>
           </li>
-          <li class="vertical-line h-50"></li>
+          <li class="d-none d-sm-block vertical-line h-50"></li>
           <li class="d-flex align-items-center column-gap-2" style="cursor: pointer;">
-            <i class="fa-regular fa-circle-user fs-5"></i>
-            <a href="#" class="text-decoration-none" style="color: black;">Sign In</a>
+            <i class="fa-regular fa-circle-user d-none d-sm-block"></i>
+            <a href="#" class="text-decoration-none fs-6" style="color: black;">Sign In</a>
+            <i class="fa-solid fa-bars d-block d-sm-none"></i>
           </li>
         </ul>
       </div>
     </div>
+    <!-- for mobile screen -->
+    <ul class="mobile-head-nav d-flex d-md-none justify-content-center align-items-center text-capitalize column-gap-2 list-unstyled text-center mx-auto" style="background-color: rgba(211, 211, 211, 0.3);" id="head-nav2">
+      <li><a href="#">Find Job Seaker</a></li>
+      <li class="active"><a href="#">For an employee</a></li>
+    </ul>
   </header>
 
 <!-- Main -->
   <!-- Tabs Navigation -->
-  <main class="mx-2 px-2 mx-md-3 px-md-3 mx-xl-5 px-xxl-5 d-flex flex-column">
-    <div class="mt-3 column-gap-4 text-capitalize d-flex column-gap-2" id="tab-nav">
+  <main class="d-flex flex-column px-3 mx-auto">
+    <div class="column-gap-4 text-capitalize d-flex column-gap-2 w-100 overflow-x-auto" id="tab-nav">
       <a href="#find-experts" class="text-black text-decoration-none active">Find Experts</a>
       <a href="#post-jobs" class="text-black text-decoration-none">Post Jobs</a>
       <a href="#why-y-axis" class="text-black text-decoration-none">Why Y-axis</a>
@@ -52,16 +59,18 @@
     </div>
 
     <!-- search container -->
-    <div class="m-auto my-4" style="min-width: 60%;">
-      <div class="search-container w-100">
-        <label class="ms-3 me-4">
-          <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="my-3 my-md-4 mx-auto" style="width: max-content;">
+      <div class="search-container d-flex flex-wrap align-items-center">
+        <label class="ms-1 me-2 me-lg-4 d-flex align-items-center column-gap-2">
+          <i class="fa-solid fa-magnifying-glass" style="opacity: 0.7;"></i>
           <input type="text" placeholder="Search job title, Keywords" class="search-title">
           <i class="fa-solid fa-xmark" style="color: #ff0000; background-color: rgba(128, 128, 128, 0.15); border-radius: 50%; padding: 4px; cursor: pointer;"></i>
         </label>
-        <div class="vl"></div>
-        <div class="country-select h-search-drop">
-          <img class="search-image mx-3" style="opacity: 0.8;" src="./assets/uk.webp" alt="Search jobs" width="24" height="24" />
+
+        <div class="vl d-none d-md-block"></div>
+
+        <div class="country-select h-search-drop mx-auto">
+          <img class="search-image mx-2 mx-md-1 mx-lg-3" style="opacity: 0.8;" src="./assets/uk.webp" alt="Search jobs" width="24" height="24" />
           <select id="countrySelector" onchange="showFlag()" class="border-0 bg-transparent">
             <option value="Australia">Australia</option>
             <option value="Canada">Canada</option>
@@ -82,61 +91,42 @@
         <a class="find-jobs-btn text-light" href="#">Find Experts</a>
       </div>
 
-      <div class="mobile-container">
-        <div class="search-section">
-          <img class="search-image" src="./assets/uk.webp" alt="Search jobs" width="24" height="24" />
-          <input type="text" placeholder="Search title, Keywords" class="search-title">
-        </div>
-
-        <div class="country-select h-search-drop">
-          <div id="flagContainer"></div>
-          <select id="countrySelector" onchange="showFlag()">
-              <option value="Australia">Australia</option>
-              <option value="Canada">Canada</option>
-              <option value="Denmark">Denmark</option>
-              <option value="Germany">Germany</option>
-              <option value="Hong Kong">Hong Kong</option>
-              <option value="Ireland">Ireland</option>
-              <option value="New Zealand">New Zealand</option>
-              <option value="Singapore">Singapore</option>
-              <option value="South Africa">South Africa</option>
-              <option value="United Arab Emirates">UAE</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="USA" selected="">USA</option>
-          </select>
-        </div>
-      
-
-        <div class="relative-container">
-            <a class="find-jobs-btn" href="/r/search?fresh=true">Find Experts</a>
-            <div class="additional-element"></div>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-between mt-4 text-black" >
+      <div class="d-flex flex-column flex-md-row flex-wrap column-gap-3 row-gap-3 justify-content-between mt-4 text-black" >
         <label class="fw-medium text-capitalize">
           <input type="checkbox" name="premium_members" id="premium_members">
           premium members only
         </label>
-        <p>About 304932 results in (0.545) seconds</p>
+        <p class="text-center">About 304932 results in (0.545) seconds</p>
       </div>
     </div>
 
     <!-- filters -->
-    <div class="navbar navbar-expand-lg sticky-top mb-3" style="background-color: rgb(240, 240, 243);" style="height: 10dvh;" >
+    <div class="navbar navbar-expand-md sticky-top py-0 mb-md-3" >
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav fs-6 fw-normal text-black d-flex flex-wrap justify-content-evenly w-100" id="filters">
           <!-- filters render from script.js, components.js, dataset.js -->
         </ul>
       </div>
+      <!-- mobile screen filters -->
+      <div class="w-100 d-flex d-md-none justify-content-between align-items-center">
+        <h4 class="text-capitalize">find the experts</h4>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" style="width: 40px;" type="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-filter" style="rotate: 0deg;"></i>
+          </button>
+          <ul class="dropdown-menu" style="right: 0; left: auto;" id="mobile-filters">
+            <!-- filters render from script.js, components.js, dataset.js -->
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Content -->
-    <div class="d-flex justify-content-between mb-5 px-2" style="margin-top: 3dvh;">
-      <aside class="d-flex flex-column row-gap-3 overflow-x-hidden overflow-y-auto scroll-bar" style="width: 29%; height: 82dvh;" id="experts-list">
+    <div class="content d-flex justify-content-between mb-5 px-2" style="margin-top: 3dvh;">
+      <aside class="d-flex flex-column row-gap-3 overflow-x-hidden overflow-y-auto scroll-bar" id="experts-list">
         <!-- experts list data renders from style.js, component.js, dataset.js -->
       </aside>
-      <section class="overflow-x-hidden overflow-y-auto scroll-bar d-none d-md-block" id="expert-detail-page" style="width: 68%; height: 82dvh;">
+      <section class="overflow-x-visible overflow-y-auto scroll-bar d-none d-md-block" id="expert-detail-page">
         <!-- expert detail page render from script.js, component.js, dataset.js -->
       </section>
     </div>
@@ -145,12 +135,11 @@
 
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-top d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
+  <footer class="px-3">
+    <div class="footer-container d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
         <div class="footer-new d-flex flex-wrap flex-grow-1 justify-content-between">
           <div class="footer-section">
-            <h3 class="fw-bold">ABOUT US</h3>
+            <h3 class="fw-bold footer-accordion">ABOUT US <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
             <ul class="fw-medium">
               <li style="line-height: 15px;"><a href="#">About Y Axis</a></li>
               <li style="line-height: 15px;"><a href="#">Careers</a></li>
@@ -159,8 +148,9 @@
               <li style="line-height: 15px;"><a href="#">Press and News</a></li>
             </ul>
           </div>
+          <hr class="d-block d-sm-none">
           <div class="footer-section">
-            <h3 class="fw-bold">TESTIMONIALS</h3>
+            <h3 class="fw-bold footer-accordion">TESTIMONIALS <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
             <ul class="fw-medium">
               <li style="line-height: 15px;" ><a href="#">Success Videos</a></li>
               <li style="line-height: 15px;" ><a href="#">Customer Reviews</a></li>
@@ -168,8 +158,9 @@
               <li style="line-height: 15px;" ><a href="#">Our Success</a></li>
             </ul>
           </div>
+          <hr class="d-block d-sm-none">
           <div class="footer-section">
-            <h3 class="fw-bold">BLOGS</h3>
+            <h3 class="fw-bold footer-accordion">BLOGS <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
             <ul class="fw-medium">
               <li style="line-height: 15px;" ><a href="#">Immigration News</a></li>
               <li style="line-height: 15px;" ><a href="#">Immigration Blog</a></li>
@@ -177,8 +168,9 @@
               <li style="line-height: 15px;" ><a href="#">Visa Stories</a></li>
             </ul>
           </div>
+          <hr class="d-block d-sm-none">
           <div class="footer-section">
-            <h3 class="fw-bold">INDIAN LANGUAGES</h3>
+            <h3 class="fw-bold footer-accordion">INDIAN LANGUAGES <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
             <ul class="fw-medium">
               <li style="line-height: 15px;" ><a href="#">Hindi</a></li>
               <li style="line-height: 15px;" ><a href="#">Tamil</a></li>
@@ -188,8 +180,9 @@
               <li style="line-height: 15px;" ><a href="#">Kannada</a></li>
             </ul>
           </div>
+          <hr class="d-block d-sm-none">
           <div class="footer-section">
-            <h3 class="fw-bold" style="white-space: nowrap;">FOREIGN LANGUAGES</h3>
+            <h3 class="fw-bold footer-accordion" style="white-space: nowrap;">FOREIGN LANGUAGES <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
             <ul class="fw-medium">
               <li style="line-height: 15px;" ><a href="#">Arabic</a></li>
               <li style="line-height: 15px;" ><a href="#">French</a></li>
@@ -200,6 +193,7 @@
               <li style="line-height: 15px;" ><a href="#">Italian</a></li>
             </ul>
           </div>
+          <hr class="d-block d-sm-none">
         </div>
         <div class="footer-sections">
           <div>
@@ -214,7 +208,7 @@
         <div class="mt-5 d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
           <div class="footer-middle flex-grow-1">
             <h3 class="fw-bold">CONTACT US</h3><br>
-            <div class="d-flex flex-wrap justify-content-between flex-grow-1">
+            <div class="d-flex flex-wrap gap-2 justify-content-between flex-grow-1">
               <div class="country-contact">
                 <img src="./assets/india.webp" style="transform: translate(0px, -5px);" alt="India Flag">
                 <div class="contact-info">
@@ -275,7 +269,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
 
     <div class="footer-bottom">

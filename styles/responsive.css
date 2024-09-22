@@ -122,15 +122,6 @@
          padding: 50px 0;
          /* Increase padding for larger screens */
      }
-
-     .footer-new {
-         display: grid;
-         grid-template-columns: repeat(5, 1fr);
-         /* 5 columns */
-         gap: 80px;
-         /* Increase gap between footer items */
-     }
-
      .footer-section h3,
      .footer-middle h3 {
          font-size: 20px;
@@ -187,13 +178,6 @@
          margin: 0;
 
      }
-
-     .logo-img {
-         margin-top: 10px;
-         max-width: 100px;
-         display: none;
-     }
-
      .h4 {
          display: flex;
          font-size: 16px;
@@ -451,25 +435,6 @@
      .footer-top {
          flex-direction: column;
      }
-
-     .footer-section {
-         width: 100%;
-         margin-bottom: 20px;
-         justify-content: left;
-     }
-
-     .country-contacts {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         gap: 10px;
-     }
-
-     .country-contact {
-         width: 10px;
-         margin-bottom: 0;
-         padding-top: 12px;
-     }
-
      .footer-bottom {
          flex-direction: column;
          align-items: flex-start;
@@ -1052,14 +1017,6 @@
          border-bottom: 2px solid #003366;
          border-right: 4px solid red;
      }
-
-     .search-container {
-         display: none;
-     }
-
-     .modile-container {
-         display: block;
-     }
  }
 
  @media (max-width: 1024px) {
@@ -1204,10 +1161,6 @@
  }
 
  @media screen and (max-width: 600px) {
-     body {
-         padding: 10px;
-     }
-
      .accordion-header {
          font-size: 15px;
      }
@@ -1287,11 +1240,76 @@
      padding: 40px 70px 10px 10px;
      width: 321px;
  }
+ 
+ @media screen and (max-width: 576px) {
+    .footer-new {
+        width: 100% !important;
+    }
+    .footer-new .footer-section {
+        width: 90%;
+        margin-left: 5px;
+    }
+    .footer-section ul {
+        max-height: 0;
+    }
+    .footer-sections :is(input, button) {
+        width: 100% !important;
+    }
+ } 
 
  @media screen and (max-width: 768px) {
-
+    header, main, footer {
+        width: 100vw;
+    }
+    header * {
+        font-size: 13px !important;
+    }
+    .search-container {
+        box-shadow: none;
+        justify-content: center;
+        padding: 0 !important;
+        width: 90vw;
+        border: none;
+    }
+    .search-container > :is(label, div, a) {
+        width: 100% !important;
+        margin: 0.7rem auto !important;
+    }
+    .search-container > :is(label, div) {
+        box-shadow: 0px 8px 16px 0px #7F6AFF4D;
+        padding: 0.5rem 0.6rem;
+    }
+    main > .navbar {
+        background-color: #fff;
+    }
+    .content > aside {
+        width: 97%;
+        margin: 0 auto;
+    }
+    .scroll-bar::-webkit-scrollbar {
+        width: 0;
+    }
+    .footer-sections {
+        width: 100%;
+    }
+    .country-contact {
+        width: 45%;
+    }
+ }
+ @media screen and (min-width: 768px) and (max-width: 992px) {
+    header, main, footer {
+        width: 92vw;
+    }
+    header * {
+        font-size: 15px !important;
+    }
  }
 
- @media screen and (min-width: 768px) {
-    
+ @media screen and (min-width: 992px) {
+    header, main, footer {
+        width: 87vw;
+    }
+    header * {
+        font-size: 16px !important;
+    }
  }

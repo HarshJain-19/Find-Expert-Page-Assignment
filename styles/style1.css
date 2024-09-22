@@ -28,39 +28,20 @@
     font-family: navbar3;
     src: url(fonts/MuliLight-lg9VZ.ttf);
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f6f8fa;
     width: 100%;
-
-
 }
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 5px;
-    margin-left: 5%;
-    margin-right: 3%;
-}
-
 
 header {
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    position: relative;
-    top: -20px;
-    z-index: 1000;
-    height: 82px;
-
+    margin: 0 auto;
 }
 
 .parentelement {
@@ -69,13 +50,8 @@ header {
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 81px;
-    margin-top: -1px;
-
-
+    border-bottom: 2px solid #0000001a;
+    height: 40px;
 }
 
 .header-container .logo-img {
@@ -660,26 +636,19 @@ main {
     font-size: 14px;
 }
 
-.footer-container {
-    width: 90%;
+footer {
     margin: 0 auto;
-
 }
-
-
-.footer-top {
+.footer-container {
+    margin: 0 auto;
     margin-bottom: 40px;
-}
-
-.footer-section {
-    margin-bottom: 20px;
 }
 
 .footer-section h3,
 .footer-middle h3 {
     font-size: 14px;
     margin-bottom: 15px;
-    color: #045eb8;
+    color: #003366;
     font-family: navbar;
 }
 
@@ -703,12 +672,14 @@ main {
 .footer-section ul li a:hover {
     text-decoration: underline;
 }
-
+.footer-new {
+    margin-bottom: 20px;
+}
 
 
 .footer-sections {
     margin-bottom: 20px;
-    color: #045eb8;
+    color: #003366;
     font-size: 12px;
     width: 321px;
     border-radius: 0px;
@@ -726,7 +697,8 @@ main {
     border: 1px solid #ccc;
     border-right: none;
     width: 290px;
-    height: 56px;
+    height: 100px !important;
+    background-color: #d3d3d38f !important;
 }
 
 .newsletter-form button {
@@ -841,19 +813,9 @@ footer {
     background-color: white;
     padding: 40px 0;
 }
-
-
-
-
-
 .footer-section {
-    flex: 1;
     min-width: 150px;
-    margin-bottom: 20px;
-
 }
-
-
 
 .footer-section ul {
     list-style: none;
@@ -898,16 +860,13 @@ footer {
 .country-contact {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    margin-right: 30px;
-    padding-right: 10px;
-
+    gap: 1rem 1rem;    
 }
 
 .country-contact img {
     width: 24px;
     height: 16px;
-    margin-right: 29px;
+    margin-right: 1rem;
     margin-top: -75px;
 }
 
@@ -1298,7 +1257,7 @@ footer {
     position: relative;
 }
 
-.accordion-header .accordion-button::before {
+.content .accordion-header .accordion-button::before {
     content: '';
     position: absolute;
     left: 0;
@@ -1369,14 +1328,3 @@ td {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.search-container {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    border: 1px solid #E2E2E2;
-    border-radius: 4px;
-    padding: 5px 13px 5px 24px;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 16px 0px #7F6AFF4D;
-    height: 80px;
-}

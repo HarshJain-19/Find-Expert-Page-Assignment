@@ -13,6 +13,23 @@ const renderFilterDropdown = data => {
   )
 };
 
+const renderMobileFilterDropdown = (data, index) => {
+  return (
+    `<div class="accordion-item" style="transition-duration: 1s;">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+          ${data.filter_name}
+        </button>
+      </h2>
+      <div id="collapse${index}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="word-wrap: break-word;">
+          ${data.options.map(e => `<a class="dropdown-item d-block" href="${e.link}">${e.option_name}</a>`).join(" ")}
+        </div>
+      </div>
+    </div>`
+  );
+};
+
 const renderExpertsList = (data, index) => {
   let shownDetailItems = ["expertise", "visa_status", "current_location", "relocation"];
   let shownDetails = shownDetailItems.map(e => {
@@ -25,7 +42,7 @@ const renderExpertsList = (data, index) => {
   }).join(" ");
 
   return (
-    `<div class="w-100 shadow px-4 pt-3 pb-1 grow" style="cursor: pointer" onclick="renderExpertPage(expertsData[${index}])" >
+    `<div class="expert-cards rounded px-4 pt-3 pb-1 grow mx-auto" onclick="renderExpertPage(expertsData[${index}])" >
       <div class="my-1 d-flex mb-2 column-gap-3">
         <div style="width: 50px; margin-top: -7px;" class="position-relative">
           <img src="${data.profile_pic_url}" alt="image${data.expert_id}" class="w-100 position-absolute" >
