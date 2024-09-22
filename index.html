@@ -71,7 +71,7 @@
 
         <div class="country-select h-search-drop mx-auto">
           <img class="search-image mx-2 mx-md-1 mx-lg-3" style="opacity: 0.8;" src="./assets/uk.webp" alt="Search jobs" width="24" height="24" />
-          <select id="countrySelector" onchange="showFlag()" class="border-0 bg-transparent">
+          <select id="countrySelector" onchange="showFlag()" class="border-0 bg-transparent flex-grow-1">
             <option value="Australia">Australia</option>
             <option value="Canada">Canada</option>
             <option value="Denmark">Denmark</option>
@@ -123,7 +123,7 @@
 
     <!-- Content -->
     <div class="content d-flex justify-content-between mb-5 px-2" style="margin-top: 3dvh;">
-      <aside class="d-flex flex-column row-gap-3 overflow-x-hidden overflow-y-auto scroll-bar" id="experts-list">
+      <aside class="d-flex flex-column row-gap-3 overflow-x-hidden overflow-y-auto scroll-bar py-2" id="experts-list">
         <!-- experts list data renders from style.js, component.js, dataset.js -->
       </aside>
       <section class="overflow-x-visible overflow-y-auto scroll-bar d-none d-md-block" id="expert-detail-page">
