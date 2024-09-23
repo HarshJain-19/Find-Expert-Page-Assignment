@@ -41,5 +41,12 @@ Array.from(footerAccordion).forEach(e => {
   }
 });
 
+const closeBodyScroll = () => {
+  document.body.style.height = "100vh";
+  document.body.style.overflow = "hidden";
+}
+const openBodyScroll = () => {
+  document.body.style.overflow = "auto";
+}
 
 

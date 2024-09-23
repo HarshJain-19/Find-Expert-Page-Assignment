@@ -106,7 +106,6 @@ a {
   width: 150px;
   height: 45px;
   text-align: center;
-  margin-left: 32px;
 }
 
 .btn-orange-side::after {
@@ -132,7 +131,6 @@ a {
   width: 150px;
   height: 45px;
   text-align: center;
-  margin-left: 32px;
 }
 
 .dropdown .show i {
@@ -187,7 +185,39 @@ main > .navbar {
 }
 .content > section {
   width: 68%;
+  background-color: #fff;
+  position: relative;
 }
+.content> section:target {
+  display: block !important;
+}
+.mobile-overlay {
+  height: 30px;
+  width: 130%;
+  margin-left: -15%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-bottom: 0.5px solid #000;
+}
+/* .mobile-overlay > div {
+  width: 22%;
+  height: 8px;
+  background-color: lightgray;
+  border-radius: 1rem;
+  margin: 0 auto;
+} */
+.mobile-overlay > a {
+  font-size: 20px;
+  color: #000;
+  position: fixed;
+  right: 5%;
+  top: 1%;
+  color: red !important;
+  background-color: #fff;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
+
 .expert-cards {
   box-shadow: 0 3px 10px #bdbdf7;
   cursor: pointer; 

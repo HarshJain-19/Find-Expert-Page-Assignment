@@ -1286,14 +1286,30 @@
         width: 97%;
         margin: 0 auto;
     }
+    .content > section {
+        display: none;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0; 
+        right: 0;
+        z-index: 10000;
+    }
     .scroll-bar::-webkit-scrollbar {
-        width: 0;
+        width: 0 !important;
     }
     .footer-sections {
         width: 100%;
     }
     .country-contact {
         width: 45%;
+    }
+    .btn-normal, .btn-orange-side {
+        width: 120px;
+        height: 35px;
+        padding: 3px 5px;
+        font-size: 12px;
     }
  }
  @media screen and (min-width: 768px) and (max-width: 992px) {

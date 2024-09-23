@@ -89,7 +89,7 @@ const expertsData = [
     industry: "information technology and services",
     qualification: "MCA, Computer Science, Pune University",
     total_experience: "5.5 Years",
-    english_proficiency: "",
+    english_proficiency: "proficient",
     passport: "India",
     more_info: {
       "expertise": {

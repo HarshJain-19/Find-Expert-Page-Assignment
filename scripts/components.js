@@ -62,6 +62,10 @@ const renderExpertsList = (data, index) => {
 }
 
 const renderExpertPage = data => {
+  if (window.innerWidth<=768) {
+    window.location.hash = "#expert-detail-page";
+    closeBodyScroll();
+  }
   const accordionDetails = (Object.keys(data.more_info).map((e, i) => {
     const tabs = Object.keys(data.more_info[e]).length? (Object.entries(data.more_info[e]).map(e => (
       `<div class="px-2">
@@ -88,26 +92,30 @@ const renderExpertPage = data => {
 
   const expertDetailPage = (
     `<div class="shadow px-4 py-3">
-      <div class="d-flex align-items-center justify-content-between border-bottom border-3 pb-3">
-        <div class="d-flex column-gap-3 align-items-center justify-content-between">
-          <div class="position-relative" style="width: 100px; height: 100px;">
-            <img src="${data.profile_pic_url}" alt="image1" class="position-absolute w-100">
-            ${data.profile_verified ? ("<img src=\"./assets/check.png\" alt=\"tick\" class=\"position-absolute\" style=\"width: 30%; right: -5px;\">") : ""}
-          </div>
-          <div>
+      <div class="d-block d-md-none mobile-overlay">
+        <!-- <div></div> -->
+        <a href="#" onclick="openBodyScroll()"><i class="fa-solid fa-xmark"></i></a>
+      </div>
+      <div class="d-flex align-items-start column-gap-3 justify-content-between border-bottom border-3 pb-3">
+        <div class="position-relative" style="width: 100px; height: 100px;">
+          <img src="${data.profile_pic_url}" alt="image1" class="position-absolute w-100">
+          ${data.profile_verified ? ("<img src=\"./assets/check.png\" alt=\"tick\" class=\"position-absolute\" style=\"width: 30%; right: -5px;\">") : ""}
+        </div>
+        <div class="d-flex flex-wrap flex-grow-1 column-gap-2 align-items-center justify-content-between">
+          <div class="flex-grow-1">
             <div class="d-flex column-gap-2 mb-2" style="color: #003366;">
               <h5 style="font-size: 18px;">${data.expert_name}</h5>
               <div class="d-inline-block bg-warning py-1 px-2 fw-semibold h-50" style="font-size: 13px; line-height: 0.9em;"><i class="fa-regular fa-star"></i>Premium</div>
             </div>
-            <div class="fw-medium" style="line-height: 0.2em; font-size: 14px;">
+            <div class="fw-medium" style="line-height: 1em; font-size: 14px;">
               <p>${data.designation} ${data.designated_company},</p>
-              <p>${data.qualification}</p>
+              <p style="margin-top: -10px;" >${data.qualification}</p>
             </div>
           </div>
-        </div>
-        <div class="d-flex flex-wrap row-gap-2">
-          <button class="btn-normal">Add to Shortlist</button>
-          <button class="btn-orange-side">Get Contact Details</button>
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn-normal">Add to Shortlist</button>
+            <button class="btn-orange-side">Get Contact Details</button>
+          </div>
         </div>
       </div>
       <div class="d-flex flex-wrap flex-grow-1 my-3 pt-3 pb-1 border-bottom border-3">
