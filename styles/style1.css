@@ -857,6 +857,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem 1rem;    
+    width: max-content;
 }
 
 .country-contact img {

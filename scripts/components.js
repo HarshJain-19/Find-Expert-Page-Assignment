@@ -42,7 +42,7 @@ const renderExpertsList = (data, index) => {
   }).join(" ");
 
   return (
-    `<div class="expert-cards rounded px-4 pt-3 pb-1 grow mx-auto" onclick="renderExpertPage(expertsData[${index}])" >
+    `<div class="expert-cards rounded px-4 pt-3 pb-1 grow mx-auto" onclick="renderExpertPage(expertsData[${index}], true)" >
       <div class="my-1 d-flex mb-2 column-gap-3">
         <div style="width: 50px; margin-top: -7px;" class="position-relative">
           <img src="${data.profile_pic_url}" alt="image${data.expert_id}" class="w-100 position-absolute" >
@@ -61,8 +61,8 @@ const renderExpertsList = (data, index) => {
   );
 }
 
-const renderExpertPage = data => {
-  if (window.innerWidth<=768) {
+const renderExpertPage = (data, redirection) => {
+  if (redirection && window.innerWidth<=768) {
     window.location.hash = "#expert-detail-page";
     closeBodyScroll();
   }

@@ -1240,6 +1240,16 @@
      padding: 40px 70px 10px 10px;
      width: 321px;
  }
+
+ @media screen and (max-width: 480px) {
+    .country-contact {
+        width: 50% !important;
+        margin: auto;
+    }
+    .country-contact > img {
+        margin-bottom: -25px !important;
+    }
+ }
  
  @media screen and (max-width: 576px) {
     .footer-new {
